@@ -2,8 +2,16 @@
 
 All notable changes to this project are documented in this file.
 
-## [0.1.0] - 2026-10-26
+## [Unreleased]
+
+## [0.1.2] - 2026-10-31
+
+- Floor yeptris at the fixed `~> 0.6.51` line (marshal strict-dup
+  false-positive fixed, yeptris-ruby#333)
+
+## [0.1.1] - 2026-10-28
 
 ### Added
 
-- First release: the `[asyncapi,path=...]` preprocessor and the section renderer over lutaml-asyncapi — servers, channels, operations (3.x top-level and 2.x embedded publish/subscribe) and messages, with descriptions through the coradoc monorepo (soft-fallback + link bridge) and `::Lutaml` top-level resolution.
+- Initial release: render AsyncAPI documents (2.6/3.0/3.1) from the
+  lutaml-asyncapi model into Metanorma documents
