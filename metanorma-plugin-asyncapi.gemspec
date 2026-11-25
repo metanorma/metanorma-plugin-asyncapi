@@ -33,8 +33,8 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "asciidoctor"
   # lutaml-model requires an XML adapter at require time
-  spec.add_dependency "lutaml-asyncapi", "~> 0.1.0"
-  spec.add_dependency "lutaml-model", "~> 0.8.122"
+  spec.add_dependency "lutaml-asyncapi", "~> 0.1.2"
+  spec.add_dependency "lutaml-model", "~> 0.8.156"
   spec.add_dependency "nokogiri"
   spec.add_dependency "yeptris", "~> 0.6.51"
 end
