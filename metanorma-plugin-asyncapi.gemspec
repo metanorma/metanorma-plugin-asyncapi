@@ -32,6 +32,13 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "asciidoctor"
+  # The descriptions renderer converts CommonMark descriptions through
+  # the ceradoc hub (renamed coradoc → coridoc → ceradoc, 2026-11-25):
+  # markdown parsing (ceradoc-markdown) into the asciidoc writer
+  # (ceradoc-adoc) over the CoreModel pipeline (ceradoc).
+  spec.add_dependency "ceradoc", "~> 3.0"
+  spec.add_dependency "ceradoc-adoc", "~> 2.0"
+  spec.add_dependency "ceradoc-markdown", "~> 1.0"
   # lutaml-model requires an XML adapter at require time
   spec.add_dependency "lutaml-asyncapi", "~> 0.1.2"
   spec.add_dependency "lutaml-model", "~> 0.8.156"

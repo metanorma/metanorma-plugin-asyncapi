@@ -5,13 +5,14 @@ require "lutaml/asyncapi"
 module Metanorma
   module Plugin
     module Asyncapi
-      # metanorma-plugin-lutaml pins coradoc ~> 1.1.8, which excludes the
-      # 2.0 hub in every metanorma-cli bundle; descriptions pass through
-      # with only the link bridge when the monorepo is absent.
+      # The monorepo is declared by the gemspec (ceradoc ~> 3.0 +
+      # ceradoc-markdown + ceradoc-adoc, the coradoc → coridoc →
+      # ceradoc rename of 2026-11-25); the guard degrades to the link
+      # bridge only when the spokes are absent at runtime.
       begin
-        require "coradoc"
-        require "coradoc/markdown"
-        require "coradoc/asciidoc"
+        require "ceradoc"
+        require "ceradoc/markdown"
+        require "ceradoc/asciidoc"
         MONOREPO = true
       rescue LoadError
         MONOREPO = false
@@ -197,7 +198,7 @@ module Metanorma
         def convert_markdown(markdown)
           return markdown unless MONOREPO
 
-          Coradoc.convert(markdown, from: :markdown, to: :asciidoc)
+          Ceradoc.convert(markdown, from: :markdown, to: :asciidoc)
         end
       end
     end
