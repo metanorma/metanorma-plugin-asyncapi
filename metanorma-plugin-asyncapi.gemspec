@@ -36,12 +36,12 @@ Gem::Specification.new do |spec|
   # the ceradoc hub (renamed coradoc → coridoc → ceradoc, 2026-11-25):
   # markdown parsing (ceradoc-markdown) into the asciidoc writer
   # (ceradoc-adoc) over the CoreModel pipeline (ceradoc).
-  spec.add_dependency "ceradoc", "~> 3.0"
-  spec.add_dependency "ceradoc-adoc", "~> 2.0"
-  spec.add_dependency "ceradoc-markdown", "~> 1.0"
+  spec.add_dependency "ceradoc", "~> 3.0.1"
+  spec.add_dependency "ceradoc-adoc", "~> 2.0.38"
+  spec.add_dependency "ceradoc-markdown", "~> 1.0.18"
   # lutaml-model requires an XML adapter at require time
-  spec.add_dependency "lutaml-asyncapi", "~> 0.1.2"
-  spec.add_dependency "lutaml-model", "~> 0.8.156"
+  spec.add_dependency "lutaml-asyncapi", "~> 0.1.5"
+  spec.add_dependency "lutaml-model", "~> 0.8.185"
   spec.add_dependency "nokogiri"
-  spec.add_dependency "yeptris", "~> 0.6.51"
+  spec.add_dependency "yeptris", "~> 0.6.86"
 end
